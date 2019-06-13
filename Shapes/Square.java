@@ -1,22 +1,31 @@
 public class Square {
     
-    private String version = "v1.0.0";
+    private String version = "v1.2.0";
     private int side;
     private String name;
+    private int myNumber;
+    
+    private static int number = 1000;
     
     public Square() {
         side = 0;
         name = "";
+        myNumber = number;
+        number++;
     }
     
     public Square(int s) {
         side = s;
         name = "";
+        myNumber = number;
+        number++;        
     }
     
     public Square(int s, String n) {
         side = s;
         name = n;
+        myNumber = number;
+        number++;
     }
     
     // Accessor or a Getter
@@ -37,6 +46,8 @@ public class Square {
         side = newSide;
     }
     
+    
+    
     public int area() {
         return side * side;
     }
@@ -45,5 +56,8 @@ public class Square {
         return 4 * side;
     }
     
+    public String toString() {
+        return "The area is " + (side * side) + " and the name of the square #" + myNumber + " is " + name;
+    }
     
 }
