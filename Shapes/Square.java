@@ -1,7 +1,7 @@
 public class Square {
     
-    private String version = "v1.2.0";
-    private int side;
+    private String version = "v1.3.0";
+    int side;
     private String name;
     private int myNumber;
     
@@ -57,7 +57,7 @@ public class Square {
     }
     
     public String toString() {
-        return "The area is " + (side * side) + " and the name of the square #" + myNumber + " is " + name;
+        return "\nThe area is " + area() + " and the name of the square #" + myNumber + " is " + getName();
     }
     
 }
