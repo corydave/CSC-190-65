@@ -1,25 +1,42 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class ShapeManager {
     
     public static void main (String[] args) {
         
-        String version = "v1.2.0";
+        String version = "v1.3.0";
         System.out.println("SHAPE MANAGER! " + version);
         
-        Square square01 = new Square();
-        Square square02 = new Square(4);
-        Square square03 = new Square(5, "MySquare");
+        ArrayList<Circle> circles = new ArrayList<Circle>();
+        ArrayList<Square> squares = new ArrayList<Square>();
         
-        // System.out.println("The area of the square is " + square01.area());
-        // System.out.println("The area of the square is " + square02.area());
-        // // square03.name = "OVERRIDE";
-        // System.out.println("The area of the square is " + square03.area() + " and the name is " + square03.getName());
-        // square03.setName("OVERRIDE2");
-        // square03.setSide(-1);
-        // System.out.println("The area of the square is " + square03.area() + " and the name is " + square03.getName());
+        squares.add(new Square());
+        squares.add(new Square(4));
+        squares.add(new Square(5, "MySquare"));
         
-        System.out.println(square01);
-        System.out.println(square02);
-        System.out.println(square03);
+        Circle circle01 = new Circle();
+        Circle circle02 = new Circle(4);
+        Circle circle03 = new Circle(5, "MyCircle");
+        
+        circles.add(circle01);
+        circles.add(circle02);
+        circles.add(circle03);
+        
+        System.out.println(squares);
+        System.out.println();
+        System.out.println(circles);
+        
+        
+        // System.out.println(square01);
+        // System.out.println(square02);
+        // System.out.println(square03);
+        
+        // System.out.println();
+        
+        // System.out.println(circle01);
+        // System.out.println(circle02);
+        // System.out.println(circle03);
     }
     
 }
